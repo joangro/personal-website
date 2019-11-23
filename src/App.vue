@@ -14,15 +14,14 @@ import Navigation from "@/components/Navigation";
 export default {
   name: "App",
   components: {
-    //HelloWorld, 
+    //HelloWorld,
     Navigation
-    
   },
   data: () => ({
     //
   }),
-  created () {
-    this.$vuetify.theme.dark = true
-  },
+  created() {
+    this.$vuetify.theme.dark = true;
+  }
 };
 </script>
