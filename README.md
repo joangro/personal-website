@@ -33,4 +33,10 @@ npm run lint
 
 ## Deploying to [Google App Engine](https://cloud.google.com/appengine/)
 
-After building for prod using `npm run build`, make sure to have the right `.gcloudignore` file as in this repo. You can check toe `app.yaml` file to see which are the files deployed in GAE.
+After building for prod using `npm run build`, make sure to have the right `.gcloudignore` file as in this repo. You can check the `app.yaml` file to see which are the files deployed in GAE.
+
+The `npm run build` command will compile the files onto the dist folder, and all of them will be uploaded to the GAE service. To do so, just run:
+
+`gcloud app deploy app.yaml` 
+
+
