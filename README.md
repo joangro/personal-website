@@ -39,4 +39,6 @@ The `npm run build` command will compile the files onto the dist folder, and all
 
 `gcloud app deploy app.yaml` 
 
+## Warning
 
+The GitHub API has a pretty low default rate limit per IP (60 requests/hours). This can cause the "Skills" load bar to stay on loading. To solve this, the best way is to use a DB to hold that data, or to add a valid API key to the requests.
