@@ -5,7 +5,6 @@ import axios from "axios";
 Vue.use(Vuex);
 
 const username = "joangro";
-const token = "3b4f4d502c798e7d6e1550b54e77530e04e957f3";
 
 export default new Vuex.Store({
   state: {
@@ -25,18 +24,16 @@ export default new Vuex.Store({
       var data = [];
       try {
         const get_repos_options = {
-          headers: { Authorization: `token ${token}` },
           params: { sort: "updated", type: "owner" }
         };
+
         const res = await axios.get(
           `https://api.github.com/users/${username}/repos`,
           get_repos_options
         );
         for (var repo of res.data) {
           var repo_name = repo.name;
-          const languages_res = await axios.get(repo.url + "/languages", {
-            headers: { Authorization: `token ${token}` }
-          });
+          const languages_res = await axios.get(repo.url + "/languages");
           var created_at = repo.created_at.split("T")[0];
           data.push({
             name: repo_name,
