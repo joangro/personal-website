@@ -26,12 +26,13 @@ export default new Vuex.Store({
         const get_repos_options = {
           params: { sort: "updated", type: "owner" }
         };
-
         const res = await axios.get(
           `https://api.github.com/users/${username}/repos`,
           get_repos_options
         );
+
         for (var repo of res.data) {
+            console.log(repo)
           var repo_name = repo.name;
           const languages_res = await axios.get(repo.url + "/languages");
           var created_at = repo.created_at.split("T")[0];
