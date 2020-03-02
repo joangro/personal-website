@@ -8,10 +8,12 @@
         >
       </v-layout>
       <v-divider></v-divider>
-      <v-layout align-center column mt-10 mx-15>
-        <v-flex>
-          <v-row no-gutters>
-            <v-card class="mx-5" max-width="350" color="white">
+      <v-container fluid>
+          <v-row
+           align="center"
+           justify="center"
+>
+            <v-card class="ma-5" max-width="350" color="white">
               <v-card-text class="text-center">
                 <p class="headline black--text">Programming</p>
                 <pie-chart
@@ -20,7 +22,7 @@
                 ></pie-chart>
               </v-card-text>
             </v-card>
-            <v-card class="mx-5" max-width="350" color="white">
+            <v-card class="ma-5" max-width="350" color="white">
               <v-card-text class="text-center">
                 <p class="headline black--text">Other</p>
                 <pie-chart
@@ -29,7 +31,7 @@
                 ></pie-chart>
               </v-card-text>
             </v-card>
-            <v-card class="mx-5" max-width="350" color="white">
+            <v-card class="ma-5" max-width="350" color="white">
               <v-card-text class="text-center">
                 <p class="headline black--text">General</p>
                 <pie-chart
@@ -39,8 +41,7 @@
               </v-card-text>
             </v-card>
           </v-row>
-        </v-flex>
-      </v-layout>
+      </v-container>
     </v-flex>
   </v-container>
 </template>
