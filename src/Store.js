@@ -32,7 +32,6 @@ export default new Vuex.Store({
         );
 
         for (var repo of res.data) {
-            console.log(repo)
           var repo_name = repo.name;
           const languages_res = await axios.get(repo.url + "/languages");
           var created_at = repo.created_at.split("T")[0];

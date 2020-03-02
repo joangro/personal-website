@@ -94,8 +94,7 @@ export default {
         //background-size: cover;
     }
     .scroll_down_ico{
-        margin-right: 0px;
-        margin-left: 0px;
+        margin-left: 8px !important;
     }
 
 </style>

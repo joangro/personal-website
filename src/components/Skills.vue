@@ -9,38 +9,32 @@
       </v-layout>
       <v-divider></v-divider>
       <v-container fluid>
-          <v-row
-           align="center"
-           justify="center"
->
-            <v-card class="ma-5" max-width="350" color="white">
-              <v-card-text class="text-center">
-                <p class="headline black--text">Programming</p>
-                <pie-chart
-                  :data="languagesData"
-                  :options="chartOptions"
-                ></pie-chart>
-              </v-card-text>
-            </v-card>
-            <v-card class="ma-5" max-width="350" color="white">
-              <v-card-text class="text-center">
-                <p class="headline black--text">Other</p>
-                <pie-chart
-                  :data="otherData"
-                  :options="chartOptions"
-                ></pie-chart>
-              </v-card-text>
-            </v-card>
-            <v-card class="ma-5" max-width="350" color="white">
-              <v-card-text class="text-center">
-                <p class="headline black--text">General</p>
-                <pie-chart
-                  :data="generalData"
-                  :options="chartOptions"
-                ></pie-chart>
-              </v-card-text>
-            </v-card>
-          </v-row>
+        <v-row align="center" justify="center">
+          <v-card class="ma-5" max-width="350" color="white">
+            <v-card-text class="text-center">
+              <p class="headline black--text">Programming</p>
+              <pie-chart
+                :data="languagesData"
+                :options="chartOptions"
+              ></pie-chart>
+            </v-card-text>
+          </v-card>
+          <v-card class="ma-5" max-width="350" color="white">
+            <v-card-text class="text-center">
+              <p class="headline black--text">Other</p>
+              <pie-chart :data="otherData" :options="chartOptions"></pie-chart>
+            </v-card-text>
+          </v-card>
+          <v-card class="ma-5" max-width="350" color="white">
+            <v-card-text class="text-center">
+              <p class="headline black--text">General</p>
+              <pie-chart
+                :data="generalData"
+                :options="chartOptions"
+              ></pie-chart>
+            </v-card-text>
+          </v-card>
+        </v-row>
       </v-container>
     </v-flex>
   </v-container>
