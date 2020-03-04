@@ -35,6 +35,14 @@
           @click="$vuetify.goTo('#contact', '')"
           >Contact</v-btn
         >
+        <v-btn
+          text
+          class="menu-button-css "
+          color="blue"
+          href="https://blog.graunoel.com"
+          target="_blank"
+          >Blog  <v-icon>mdi-open-in-new</v-icon></v-btn
+        >
         <v-spacer></v-spacer>
       </v-app-bar-items>
     </v-app-bar>
