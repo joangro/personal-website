@@ -18,13 +18,13 @@
           no-gutters>
             <v-col class="mx-12 mt-8">
                 <v-btn outlined @click="github">
-                <v-icon left>mdi-github-box</v-icon>
+                <v-icon left>mdi-github</v-icon>
                 GitHub
                 </v-btn>
             </v-col> 
             <v-col class="mx-12 mt-8">
                 <v-btn outlined @click="linkedin">
-                <v-icon left>mdi-linkedin-box</v-icon>
+                <v-icon left>mdi-linkedin</v-icon>
                 Linkedin
                 </v-btn> 
             </v-col> 
