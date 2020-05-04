@@ -41,7 +41,7 @@
           color="blue"
           href="https://blog.graunoel.com"
           target="_blank"
-          >Blog  <v-icon>mdi-open-in-new</v-icon></v-btn
+          >Blog <v-icon>mdi-open-in-new</v-icon></v-btn
         >
         <v-spacer></v-spacer>
       </v-app-bar-items>
