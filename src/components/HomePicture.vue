@@ -9,7 +9,7 @@
 
             <div class="display-3 font-weight-thin white--text text-xs-center">JOAN GRAU NOËL</div>
             <v-divider dark/>
-            <div class="display-1 font-weight-light white--text text-xs-center mb-3">Engineer · Developer · Cloud</div>
+            <div class="display-1 font-weight-light white--text text-xs-center mb-3">Engineer · DevOps · Cloud</div>
         <v-layout 
         wrap
         justify-center mb="5">

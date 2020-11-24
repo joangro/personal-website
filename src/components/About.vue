@@ -28,25 +28,30 @@
             </p>
             <p class="text-justify">
               I joined the degree due to my interest on web technologies and IT
-              systems and communications. However later on I would grow an interest
-              on developing and programming, which marked the later years of my
-              degree, and afterwards my professional interests. As well, during my
-              career I enjoyed learning about artificial intelligence and machine
-              learning. I applied the knowledge from both of these worlds on my
-              final degree project, combining Machine Learning with Signal
-              Processing, which you can visit
+              systems and communications. However later on I would grow an
+              interest on developing and programming, which marked the later
+              years of my degree, and afterwards my professional interests. As
+              well, during my career I enjoyed learning about artificial
+              intelligence and machine learning. I applied the knowledge from
+              both of these worlds on my final degree project, combining Machine
+              Learning with Signal Processing, which you can visit
               <a href="https://github.com/joangro/PytorchConvSep">here</a>.
             </p>
             <p class="text-justify">
-              Later I would join
-              <a href="https://www.webhelp.com/es-es/">Sellbytel/Webhelp</a>, on its
-              <a href="https://cloud.google.com/">Google Cloud Platform</a>
-              project, where I would work with top of the line cloud technology, and
-              learn a lot. Later I would become a Subject Matter Expert (SME) for
-              the team, which allowed me to also learn about team view and
-              organization. This experience had a big impact on me, as
-              professionally it made me switch into seeking cloud-related
-              opportunities.
+              Currently, I'm working as a Cloud Support Engineer for
+              <a href="https://aws.amazon.com/"> Amazon Web Services (AWS)</a>,
+              on the <a href="https://aws.amazon.com/devops/">DevOps team</a>.
+              There I am specialised on compute-based services (Elastic
+              Kubernetes Service, Elastic Container Service, Elastic
+              Beanstalk...), DevOps tooling (CloudFormation, CodeBuild,
+              CodePipeline...) and code-based services (CDKs, SDKs...). On my
+              day to day, I solve customer and service issues, working directly
+              with customers and AWS service teams, while providing best
+              practices to successfully integrate, deploy, and manage
+              applications in the cloud. I have the chance to work together and
+              learn from industry-leading companies (including AWS), while
+              learning about their specific use cases, solutions, and
+              architecture.
             </p>
           </v-layout>
         </v-col>

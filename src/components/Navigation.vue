@@ -1,16 +1,8 @@
 <template>
   <div>
-    <v-app-bar
-      app
-      clipped-left
-      elevate-on-scroll
-      class="navbar-custom ma-0 pa-0"
-    >
-      <v-app-bar-title @click="$vuetify.goTo('#', '')">{{
-        appTitle
-      }}</v-app-bar-title>
+    <v-toolbar app clipped-left class="navbar-custom ma-0 pa-0">
       <v-spacer></v-spacer>
-      <v-app-bar-items class="menu-button-css">
+      <v-toolbar-items class="menu-button-css">
         <v-btn
           text
           class="menu-button-css "
@@ -44,8 +36,8 @@
           >Blog <v-icon>mdi-open-in-new</v-icon></v-btn
         >
         <v-spacer></v-spacer>
-      </v-app-bar-items>
-    </v-app-bar>
+      </v-toolbar-items>
+    </v-toolbar>
     <v-btn
       v-scroll="onScroll"
       v-show="fab"

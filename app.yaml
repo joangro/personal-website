@@ -1,5 +1,5 @@
-runtime: nodejs10
-
+runtime: nodejs12
+service: default
 instance_class: B1
 
 handlers:
