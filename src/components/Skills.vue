@@ -21,7 +21,7 @@
           </v-card>
           <v-card class="ma-5" max-width="350" color="white">
             <v-card-text class="text-center">
-              <p class="headline black--text">Other</p>
+              <p class="headline black--text">DevOps</p>
               <pie-chart :data="otherData" :options="chartOptions"></pie-chart>
             </v-card-text>
           </v-card>
@@ -67,7 +67,7 @@ export default {
       otherData: {
         hoverBackgroundColor: "red",
         hoverBorderWidth: 10,
-        labels: ["Cloud", "Docker", "Bash", "Kubernetes", "Java"],
+        labels: ["Cloud", "Docker", "Practices", "Kubernetes", "CI/CD"],
         datasets: [
           {
             label: "Other data",
@@ -78,7 +78,7 @@ export default {
               "#339834",
               "#cc2d2d"
             ],
-            data: [10, 8, 8, 7, 6]
+            data: [10, 8, 8, 7, 8]
           }
         ]
       },
@@ -87,6 +87,7 @@ export default {
         hoverBorderWidth: 10,
         labels: [
           "Networking",
+          "Systems",
           "Infrastructure architecture",
           "Troubleshooting"
         ],
@@ -94,7 +95,7 @@ export default {
           {
             label: "General data",
             backgroundColor: ["#2c7b70", "#fad341", "#3aadd8", "#339834"],
-            data: [10, 8, 10]
+            data: [10, 9, 8, 10]
           }
         ]
       }

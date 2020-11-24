@@ -35,6 +35,7 @@ export default new Vuex.Store({
           var repo_name = repo.name;
           const languages_res = await axios.get(repo.url + "/languages");
           var created_at = repo.created_at.split("T")[0];
+          var updated_at = repo.updated_at.split("T")[0];
           data.push({
             name: repo_name,
             link: repo.html_url,
@@ -42,7 +43,8 @@ export default new Vuex.Store({
             description: repo.description,
             created_at: created_at,
             languages: languages_res.data,
-            fork: repo.fork
+            fork: repo.fork,
+            last_updated: updated_at
           });
         }
         commit("setRepositories", data);

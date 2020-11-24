@@ -104,7 +104,7 @@
                       <v-divider class="mx-4"></v-divider>
                       <v-card-text>
                         <div class="body-2">
-                          Last updated: {{ item.created_at }}
+                          Last updated: {{ item.last_updated }}
                         </div>
                       </v-card-text>
                       <v-flex v-if="item.fork">
