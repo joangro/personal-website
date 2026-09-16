@@ -1,28 +1,17 @@
-import Vue from "vue";
-import Router from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "./views/Home.vue";
-import goTo from "vuetify/es5/services/goto";
 
-Vue.use(Router);
-
-export default new Router({
-  mode: "history",
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
-      path: "/",
-      name: "home",
-      component: Home
-    },
-    {
-      path: "/about",
-      name: "about",
-      component: () => import("./views/About.vue")
-    },
-    {
-      path: "/contact",
-      name: "contact",
-      component: () => import("./views/Contact.vue")
-    }
-  ]
+    { path: "/", name: "home", component: Home },
+    { path: "/about", name: "about", component: Home },
+    { path: "/contact", name: "contact", component: Home },
+  ],
+  scrollBehavior(to) {
+    if (to.hash) return { el: to.hash, behavior: "smooth" };
+    return { top: 0 };
+  },
 });
+
+export default router;
