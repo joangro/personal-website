@@ -6,7 +6,7 @@
       >
       <nav class="main-nav" aria-label="Main navigation">
         <a href="/#experience">Experience</a>
-        <a href="/#strengths">Strengths</a>
+        <a href="/#strengths">Skills</a>
         <a href="/#projects">Projects</a>
         <a href="/#contact">Contact</a>
       </nav>

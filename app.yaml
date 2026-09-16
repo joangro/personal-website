@@ -17,6 +17,11 @@ handlers:
   upload: dist/favicon.ico
   secure: always
 
+- url: /favicon.svg
+  static_files: dist/favicon.svg
+  upload: dist/favicon.svg
+  secure: always
+
 - url: /.*
   static_files: dist/index.html
   upload: dist/index.html

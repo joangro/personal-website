@@ -8,11 +8,16 @@
         </h1>
         <p class="hero-role">
           {{ profile.role }}
-          <span>· Production &amp; Platform Engineering</span>
+          <span>· Software Engineer</span>
         </p>
-        <p class="hero-summary">
-          {{ profile.summary }}
-        </p>
+        <div class="hero-summary">
+          <p
+            v-for="(paragraph, index) in profile.summary.split('\n\n')"
+            :key="index"
+          >
+            {{ paragraph }}
+          </p>
+        </div>
         <div class="hero-actions">
           <a
             class="button button-primary"
@@ -26,30 +31,10 @@
           >
         </div>
       </div>
-      <div class="hero-note" aria-label="Current focus">
-        <span class="pulse" aria-hidden="true" />
-        <p>
-          Currently building resilient capacity and serving systems at global
-          scale.
-        </p>
-      </div>
-    </section>
-
-    <section class="impact section-wrap" aria-labelledby="impact-title">
-      <div class="section-heading">
-        <p class="eyebrow">Selected impact</p>
-        <h2 id="impact-title">Operational depth, measured in outcomes.</h2>
-      </div>
-      <div class="impact-grid">
-        <article v-for="item in impact" :key="item.label" class="impact-card">
-          <p class="card-label">
-            {{ item.label }}
-          </p>
-          <p class="impact-value">
-            {{ item.value }}
-          </p>
-          <p>{{ item.detail }}</p>
-        </article>
+      <div class="hero-media">
+        <div class="avatar-bubble">
+          <img :src="profile.avatar" :alt="profile.name" />
+        </div>
       </div>
     </section>
 
@@ -60,7 +45,7 @@
     >
       <div class="section-heading">
         <p class="eyebrow">Experience</p>
-        <h2 id="experience-title">Building systems people can depend on.</h2>
+        <h2 id="experience-title">Some of the stuff I’ve worked on.</h2>
       </div>
       <div class="timeline">
         <article
@@ -75,12 +60,13 @@
           </div>
           <div class="timeline-body">
             <h3>{{ role.title }}</h3>
-            <p>{{ role.description }}</p>
-            <ul v-if="role.highlights">
-              <li v-for="highlight in role.highlights" :key="highlight">
-                {{ highlight }}
-              </li>
-            </ul>
+            <p v-html="role.description"></p>
+          <ul v-if="role.highlights">
+            <li v-for="highlight in role.highlights" :key="highlight.label">
+              <strong>{{ highlight.label }}:</strong>
+              <span v-html="highlight.text"></span>
+            </li>
+          </ul>
           </div>
         </article>
       </div>
@@ -92,10 +78,8 @@
       aria-labelledby="strengths-title"
     >
       <div class="section-heading">
-        <p class="eyebrow">Technical strengths</p>
-        <h2 id="strengths-title">
-          The tools and practices behind reliable production.
-        </h2>
+        <p class="eyebrow">Skills</p>
+        <h2 id="strengths-title">Tools and tech I’ve worked with.</h2>
       </div>
       <div class="strength-grid">
         <article
@@ -117,8 +101,8 @@
       aria-labelledby="projects-title"
     >
       <div class="section-heading">
-        <p class="eyebrow">Selected work</p>
-        <h2 id="projects-title">A few things I have built and explored.</h2>
+        <p class="eyebrow">Projects</p>
+        <h2 id="projects-title">Things I've built outside of work.</h2>
       </div>
       <div class="project-grid">
         <a
@@ -143,10 +127,10 @@
       aria-labelledby="contact-title"
     >
       <p class="eyebrow">Contact</p>
-      <h2 id="contact-title">Let’s talk about reliable systems.</h2>
+      <h2 id="contact-title">Let's connect.</h2>
       <p>
-        For SRE, production engineering, and platform engineering opportunities,
-        reach me by email or on LinkedIn.
+        Always happy to chat about SRE, distributed systems, or new
+        opportunities. Feel free to drop me an email or find me on LinkedIn.
       </p>
       <div class="contact-links">
         <a class="button button-primary" :href="`mailto:${profile.email}`"
@@ -167,12 +151,49 @@
       </div>
     </section>
     <footer class="site-footer section-wrap">
-      <span>© {{ new Date().getFullYear() }} {{ profile.name }}</span
-      ><span>{{ profile.phone }}</span>
+      <span>© {{ new Date().getFullYear() }} {{ profile.name }}</span>
     </footer>
+    <button
+      v-show="showBackToTop"
+      class="back-to-top"
+      type="button"
+      aria-label="Back to top"
+      @click="scrollToTop"
+    >
+      <span aria-hidden="true">↑</span>
+    </button>
   </div>
 </template>
 
 <script setup>
-import { profile, impact, experience, strengths, projects } from "../content";
+import { onMounted, onUnmounted, ref } from "vue";
+import { profile, experience, strengths, projects } from "../content";
+
+const showBackToTop = ref(false);
+
+const updateBackToTopVisibility = () => {
+  showBackToTop.value = window.scrollY > 500;
+};
+
+const scrollToTop = () => {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  window.scrollTo({
+    top: 0,
+    behavior: prefersReducedMotion ? "auto" : "smooth",
+  });
+};
+
+onMounted(() => {
+  updateBackToTopVisibility();
+  window.addEventListener("scroll", updateBackToTopVisibility, {
+    passive: true,
+  });
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", updateBackToTopVisibility);
+});
 </script>
