@@ -1,35 +1,11 @@
 runtime: nodejs24
 service: default
 instance_class: B1
+entrypoint: node server.js
 
 handlers:
-- url: /assets
-  static_dir: dist/assets
-  secure: always
-
-- url: /Joan-Grau-CV.pdf
-  static_files: dist/Joan-Grau-CV.pdf
-  upload: dist/Joan-Grau-CV.pdf
-  secure: always
-
-- url: /favicon.ico
-  static_files: dist/favicon.ico
-  upload: dist/favicon.ico
-  secure: always
-
-- url: /favicon.svg
-  static_files: dist/favicon.svg
-  upload: dist/favicon.svg
-  secure: always
-
-- url: /
-  static_files: dist/index.html
-  upload: dist/index.html
-  secure: always
-
 - url: /.*
-  static_files: dist/index.html
-  upload: dist/index.html
+  script: auto
   secure: always
 
 basic_scaling:

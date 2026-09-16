@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "vite",
     "serve": "vite",
+    "start": "node server.js",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --cache --max-warnings 0",
