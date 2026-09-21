@@ -24,7 +24,7 @@ export const experience = [
       {
         label: "Incident Response ",
         text:
-          " I have commanded <strong>~20 major customer-facing outages</strong> and helped triage over 100 incidents overall. I enjoy debugging live production issues, coordinating teams, and mitigating incidents. There is nothing quite like seeing a graph show a step change after a mitigation.",
+          " I have commanded <strong>~20 major customer-facing outages</strong> and participated in approximately 100 incidents overall, leading the majority. I enjoy debugging live production issues, coordinating teams, and mitigating incidents. There is nothing quite like seeing a graph show a step change after a mitigation.",
       },
       {
         label: "Observability",
@@ -34,7 +34,7 @@ export const experience = [
       {
         label: "Capacity & Automation",
         text:
-          " I enjoy building automation that takes manual toil out of day-to-day work. Among other things, I built an <strong>automated quota service</strong> and <strong>supply/demand-matching</strong> tooling and a pipeline used across multiple partner teams.",
+          " I enjoy building automation that takes manual toil out of day-to-day work. Among other things, I built a <strong>globally deployed quota admission service</strong> and <strong>supply/demand-matching</strong> tooling and a pipeline used across multiple partner teams.",
       },
       {
         label: "Reliability & Resilience",
@@ -51,7 +51,7 @@ export const experience = [
   {
     company: "Google",
     title: "Technical Solutions Engineer",
-    dates: "March 2021–August 2022",
+    dates: "March 2021–April 2022",
     location: "Dublin, Ireland",
     description:
       "At Google Cloud, I helped some of our biggest customers adopt the platform and get more from its services, specialising in <strong>serverless</strong> and <strong>databases</strong>. I also worked across developer tools, digging into tricky issues end to end—reproducing bugs, finding root causes, and building internal tools to speed up diagnosis—while working with account and engineering teams to make products easier to support.",
@@ -133,7 +133,6 @@ export const strengths = [
       "Traffic routing",
       "Load balancing",
       "NAT gateways",
-      "eBPF",
       "Concurrency",
     ],
   },
