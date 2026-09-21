@@ -4,7 +4,7 @@ export const profile = {
   location: "London, United Kingdom",
   avatar: "/avatar.jpg",
   summary:
-    "Hello! I'm Joan, an SRE at Google, currently working on the Serverless team.\n\nI make sure Cloud Run, App Engine, and Cloud Functions customers are happy and their services keep on running. When I'm not putting out fires, I work on projects to prevent outages, improve observability, and keep the platform fast and reliable.",
+    "Site Reliability Engineer / Software Engineer at Google working on globally distributed serverless systems.\n\nFocused on reliability, observability, capacity planning, efficiency, incident response, and technical leadership.",
   email: "contact@graunoel.com",
   phone: "+44 7724 317076",
   linkedin: "https://www.linkedin.com/in/joan-grau/",
@@ -16,35 +16,38 @@ export const experience = [
   {
     company: "Google",
     title: "Site Reliability Engineer / Software Engineer",
-    dates: "April 2022-Present",
+    dates: "April 2022–Present",
     location: "London, United Kingdom",
     description:
-      "I work as a Site Reliability Engineer on the Serverless platform, including Cloud Run, App Engine, and Cloud Functions. I help keep globally distributed service running reliably, while serving millions of QPS. I work across 10+ teams involving traffic routing, ingress/egress networking, container runtimes, high performant multi-tenant serving, scaling and everyting inbetween. It's fun!",
+      "Work on Google’s serverless platform supporting Cloud Run, App Engine, Cloud Functions, and internal workloads at millions of requests per second, spanning networking, container serving, scaling, and control-plane services.",
     highlights: [
       {
-        label: "Incident Response ",
-        text:
-          " I have commanded <strong>~20 major customer-facing outages</strong> and participated in approximately 100 incidents overall, leading the majority. I enjoy debugging live production issues, coordinating teams, and mitigating incidents. There is nothing quite like seeing a graph show a step change after a mitigation.",
+        label: "Incident leadership",
+        text: " Led response for <strong>approximately 20 major customer-facing outages</strong> and the majority of approximately 100 incidents overall, coordinating mitigation and follow-up across engineering teams.",
+      },
+      {
+        label: "Automation",
+        text: " Built a <strong>globally deployed quota admission service in Go</strong> using real-time capacity signals, combining automatic approvals with decision support for manual reviews; reduced associated operational toil for SRE and development teams by <strong>approximately 20–30%</strong>.",
       },
       {
         label: "Observability",
-        text:
-          " I led the adoption of <strong>distributed tracing</strong> across five engineering teams and services, making it much faster to track down those annoying p90/p99 latency spikes and cross-service bugs. It also makes it easier to get to root cause quickly during incidents.",
+        text: " Led distributed tracing adoption across five software engineering teams and 10+ binaries, connecting request paths across asynchronous Spanner and Pub/Sub boundaries; reduced p90 time to debug and resolve incidents investigated using tracing by <strong>approximately 60%</strong>.",
       },
       {
-        label: "Capacity & Automation",
-        text:
-          " I enjoy building automation that takes manual toil out of day-to-day work. Among other things, I built a <strong>globally deployed quota admission service</strong> and <strong>supply/demand-matching</strong> tooling and a pipeline used across multiple partner teams.",
+        label: "Performance & debugging",
+        text: " Investigated production failures and performance regressions across C++ services, networking, containers, and databases using heap/core dumps, packet captures, and distributed tracing. Built a <strong>C++ presubmit service</strong> and designed a backend-drained simulator for production drains to improve platform reliability.",
       },
       {
-        label: "Reliability & Resilience",
-        text:
-          " I like diving deep into production issues and proactively finding platform gaps to prevent future problems. Among other things, I created <strong>regional drain and failure simulators</strong> to test how serverless services behave when an entire data center or metro goes down, and ran Production Readiness Reviews (PRRs) for new platform features.",
+        label: "Capacity engineering",
+        text: " Architected and deployed a supply-demand forecasting platform adopted by four partner teams, combining stockout prediction, forecast-skew detection, and capacity modelling. Lead projects covering <strong>inorganic growth projections, capacity models, and automated supply planning</strong> to reduce capacity incidents across the fleet. Work on capacity efficiency to reduce service operating costs while preserving <strong>customer workload performance and latency</strong>.",
       },
       {
-        label: "Performance",
-        text:
-          " I like diving deep into code to find optimizations that improve <strong>system performance</strong>, whether during a live incident or as part of broader platform improvements. I have tracked down bottlenecks across networking, containers, and databases to keep customer requests fast and smooth.",
+        label: "Resilience",
+        text: " Lead capacity work from the SRE side for <strong>platform regionalization</strong>, a multi-quarter effort involving multiple teams. Built a continuous indicator of regional N+1 capacity coverage and led remediation of regions below target. Developed a drain simulator to evaluate failover capacity across zone, metro, and disaster-domain failures.",
+      },
+      {
+        label: "Technical leadership",
+        text: " Own the <strong>team’s capacity analytics service</strong> and set technical direction with tech leads and contributing engineers. Conduct production readiness reviews for autoscaling and deployment features, and mentor junior SREs and software engineers.",
       },
     ],
   },
@@ -54,7 +57,7 @@ export const experience = [
     dates: "March 2021–April 2022",
     location: "Dublin, Ireland",
     description:
-      "At Google Cloud, I helped some of our biggest customers adopt the platform and get more from its services, specialising in <strong>serverless</strong> and <strong>databases</strong>. I also worked across developer tools, digging into tricky issues end to end—reproducing bugs, finding root causes, and building internal tools to speed up diagnosis—while working with account and engineering teams to make products easier to support.",
+      "Investigated enterprise serverless escalations involving architecture, networking, and performance; partnered with software and reliability engineers to identify platform issues, recurring failure modes, and long-term remediation plans.\n\nBuilt diagnostic scripts, automation tools, and troubleshooting playbooks to streamline issue reproduction and investigation. Translated customer incidents into observability improvements and product engineering priorities.",
   },
   {
     company: "Amazon Web Services",
@@ -62,14 +65,14 @@ export const experience = [
     dates: "July 2020–March 2021",
     location: "Dublin, Ireland",
     description:
-      "At AWS I worked on the DevOps Cloud Support team, helping customers troubleshoot <strong>critical issues</strong> across Kubernetes, CI/CD services, automation, and development tools, with a focus on <strong>EKS, ECS, Lambda, and CloudFormation</strong>. I also provided architecture guidance and partnered with AWS engineering teams to investigate and resolve internal service problems.",
+      "Diagnosed production issues through reproduction, root-cause analysis, and systematic debugging; partnered with service engineering teams on complex customer escalations.\n\nAdvised enterprise customers on scalability, reliability, and operational practices across Amazon EKS, Amazon ECS, Lambda, CloudWatch, and AWS CI/CD services.",
   },
 ];
 
 export const strengths = [
   {
-    label: "Languages & scripting",
-    items: ["Python", "Go", "C++", "Java", "Kotlin", "SQL", "Bash / Shell"],
+    label: "Languages",
+    items: ["Python", "Go", "C++", "Java", "Kotlin", "SQL", "Bash/Shell"],
   },
   {
     label: "Google Cloud",
@@ -121,7 +124,7 @@ export const strengths = [
     ],
   },
   {
-    label: "Systems, networking & performance",
+    label: "Systems & performance",
     items: [
       "Distributed systems",
       "Systems programming",
@@ -129,11 +132,18 @@ export const strengths = [
       "High-throughput services",
       "Performance analysis",
       "Profiling & debugging",
+      "Concurrency",
+    ],
+  },
+  {
+    label: "Networking",
+    items: [
       "Network protocols",
       "Traffic routing",
       "Load balancing",
+      "Ingress/egress networking",
       "NAT gateways",
-      "Concurrency",
+      "tcpdump",
     ],
   },
   {
@@ -141,11 +151,22 @@ export const strengths = [
     items: [
       "Incident command",
       "Distributed tracing",
-      "SLIs / SLOs",
-      "Failover testing",
-      "Capacity forecasting",
+      "SLIs/SLOs",
+      "Monitoring and alerting",
+      "Failover testing and simulation",
+      "Capacity planning and forecasting",
+      "N+1 redundancy",
       "Production Readiness Reviews",
       "Postmortems",
+    ],
+  },
+  {
+    label: "Data & analytics",
+    items: [
+      "Protocol Buffers",
+      "SQL data pipelines",
+      "Forecasting",
+      "Regression analysis",
     ],
   },
 ];
@@ -154,9 +175,11 @@ export const projects = [
   {
     name: "Audio source separation",
     description:
-      "A PyTorch project separating mixed audio tracks into individual sources using convolutional neural nets. Built as my university thesis with custom data augmentation.",
+      "Adapted a CNN-based PyTorch architecture for monaural audio source separation and applied data augmentation to improve model output.",
     tags: ["Python", "PyTorch", "Machine learning"],
     link: "https://github.com/joangro/PytorchConvSep",
+    education:
+      "Universitat Pompeu Fabra — Audiovisual Systems Engineering · 2014–2018 · Barcelona, Spain",
   },
   {
     name: "Open-source work",

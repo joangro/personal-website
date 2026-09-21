@@ -26,9 +26,7 @@
             rel="noopener"
             >Read my CV <span aria-hidden="true">↗</span></a
           >
-          <a class="button button-secondary" :href="`mailto:${profile.email}`"
-            >Get in touch</a
-          >
+          <a class="button button-secondary" href="#contact">Get in touch</a>
         </div>
       </div>
       <div class="hero-media">
@@ -60,13 +58,17 @@
           </div>
           <div class="timeline-body">
             <h3>{{ role.title }}</h3>
-            <p v-html="role.description"></p>
-          <ul v-if="role.highlights">
-            <li v-for="highlight in role.highlights" :key="highlight.label">
-              <strong>{{ highlight.label }}:</strong>
-              <span v-html="highlight.text"></span>
-            </li>
-          </ul>
+            <p
+              v-for="(paragraph, index) in role.description.split('\n\n')"
+              :key="index"
+              v-html="paragraph"
+            ></p>
+            <ul v-if="role.highlights">
+              <li v-for="highlight in role.highlights" :key="highlight.label">
+                <strong>{{ highlight.label }}:</strong>
+                <span v-html="highlight.text"></span>
+              </li>
+            </ul>
           </div>
         </article>
       </div>
@@ -115,6 +117,7 @@
           ><div>
             <p class="card-label">{{ project.tags.join(" · ") }}</p>
             <h3>{{ project.name }} <span aria-hidden="true">↗</span></h3>
+            <p v-if="project.education">{{ project.education }}</p>
             <p>{{ project.description }}</p>
           </div></a
         >
@@ -177,7 +180,7 @@ const updateBackToTopVisibility = () => {
 
 const scrollToTop = () => {
   const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
+    "(prefers-reduced-motion: reduce)",
   ).matches;
 
   window.scrollTo({
