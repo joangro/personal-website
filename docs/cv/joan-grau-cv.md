@@ -10,6 +10,7 @@ Site Reliability Engineer / Software Engineer at Google working on globally dist
 ### Google — Site Reliability Engineer / Software Engineer
 April 2022–Present | London, United Kingdom
 Work on Google’s serverless platform supporting Cloud Run, App Engine, Cloud Functions, and internal workloads at millions of requests per second, spanning networking, container serving, scaling, and control-plane services.
+The platform emulates Kubernetes-style orchestration on Google’s own infrastructure, with clusters of tens of thousands of nodes running millions of containers and serving multitenant workloads globally at low latency.
 - **Incident leadership:** Led response for approximately 20 major customer-facing outages and the majority of approximately 100 incidents overall, coordinating mitigation and follow-up across engineering teams.
 - **Automation:** Built a globally deployed quota admission service in Go using real-time capacity signals, combining automatic approvals with decision support for manual reviews; reduced associated operational toil for SRE and development teams by approximately 20–30%.
 - **Observability:** Led distributed tracing adoption across five software engineering teams and 10+ binaries, connecting request paths across asynchronous Spanner and Pub/Sub boundaries; reduced p90 time to debug and resolve incidents investigated using tracing by approximately 60%.

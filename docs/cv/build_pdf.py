@@ -52,7 +52,7 @@ def main():
                       r'<link href="\2" color="#23576B">\1</link>', escaped)
 
     story = []
-    for line in args.source.read_text().splitlines():
+    for line in args.source.read_text(encoding='utf-8').splitlines():
         if not line.strip():
             continue
         if line == '<!-- pagebreak -->':

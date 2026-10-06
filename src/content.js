@@ -19,7 +19,7 @@ export const experience = [
     dates: "April 2022–Present",
     location: "London, United Kingdom",
     description:
-      "Work on Google’s serverless platform supporting Cloud Run, App Engine, Cloud Functions, and internal workloads at millions of requests per second, spanning networking, container serving, scaling, and control-plane services.",
+      "Work on Google’s serverless platform supporting Cloud Run, App Engine, Cloud Functions, and internal workloads at millions of requests per second, spanning networking, container serving, scaling, and control-plane services.\n\nThe platform emulates Kubernetes-style orchestration on Google’s own infrastructure, with clusters of tens of thousands of nodes running millions of containers and serving multitenant workloads globally at low latency.",
     highlights: [
       {
         label: "Incident leadership",
